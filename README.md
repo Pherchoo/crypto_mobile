@@ -1,6 +1,6 @@
 # Crypto Mobile
 
-Configuración inicial con Expo y React Native. La pantalla muestra Hello World en una tarjeta blanca, sobre fondo gris y con texto morado. Los estilos se adaptaron de css (2) a StyleSheet.
+Configuración inicial con Expo y React Native. La pantalla muestra únicamente Hello World, centrado en negro sobre fondo blanco. Los estilos se definen con StyleSheet en src/App.jsx.
 
 ## Requisitos
 
@@ -20,7 +20,7 @@ Conectar el celular y la computadora a la misma red y escanear el QR en Expo Go.
 npx expo start --go --tunnel
 ```
 
-Resultado esperado: Hello World centrado en una tarjeta blanca. No requiere variables de entorno.
+Resultado esperado: Hello World centrado en negro sobre fondo blanco. No requiere variables de entorno.
 
 ## Verificar
 
@@ -31,3 +31,4 @@ npx expo export --platform android
 ```
 
 Se eliminaron las imágenes de plantilla y sus referencias en app.json. Los iconos personalizados se configurarán en una entrega posterior. El formulario de cotización queda fuera de esta entrega.
+

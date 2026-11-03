@@ -1,14 +1,22 @@
-import { Text, View } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import styles from './styles/App.styles';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar style="dark" />
-      <View style={styles.card}>
-        <Text accessibilityRole="header" style={styles.title}>Hello World</Text>
-      </View>
+      <Text style={styles.text}>Hello World</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+  },
+  text: {
+    fontSize: 28,
+    color: '#000000',
+  },
+});
