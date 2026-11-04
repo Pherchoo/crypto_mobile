@@ -7,6 +7,7 @@ import { colors } from '../styles/theme';
 export default function FormularioCotizacion() {
   const [moneda, setMoneda] = useState('');
   const [criptomoneda, setCriptomoneda] = useState('');
+  const [mensaje, setMensaje] = useState('');
 
 
 
@@ -41,23 +42,21 @@ export default function FormularioCotizacion() {
             dropdownIconColor={colors.primary}
           >
             <Picker.Item label="Seleccione una criptomoneda" value="" />
-            <Picker.Item label="Bitcoin (BTC)" value="BTC" />
-            <Picker.Item label="Ethereum (ETH)" value="ETH" />
-            <Picker.Item label="Litecoin (LTC)" value="LTC" />
-            <Picker.Item label="Solana (SOL)" value="SOL" />
-            <Picker.Item label="Dogecoin (DOGE)" value="DOGE" />
           </Picker>
         </View>
       </View>
       <Pressable
         accessibilityRole="button"
+        onPress={() => setMensaje('Formulario creado')}
 
         style={({ pressed }) => [styles.btnCotizar, pressed && styles.btnPressed]}
       >
         <Text style={styles.btnText}>Cotizar</Text>
       </Pressable>
+      {mensaje !== '' && <Text>{mensaje}</Text>}
     </View>
   );
 }
+
 
 
